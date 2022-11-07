@@ -14,26 +14,18 @@ export class FetchUfoData extends Component {
 
     static renderObservasjonerTable(observasjoner) {
         return (
-            <table className='table table-striped' aria-labelledby="tabelLabel">
-                <thead>
-                    <tr>
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {observasjoner.map(observasjon =>
-                        <tr key={observasjon.id}>
-                            <td>{observasjon.tittel}</td>
-                            <td>{observasjon.sted}</td>
-                            <td>{observasjon.dato}</td>
-                            <td>{observasjon.beskrivelse}</td>
-                        </tr>
-                    )}
-                </tbody>
-            </table>
+            <div className='row'>
+                 {observasjoner.map(observasjon =>
+                     <div key={observasjon.id} className="card col-6">
+                     <div className="card-body">
+                         <h5 className="card-title">{observasjon.tittel}</h5>
+                         <h6 className="card-subtitle mb-2 text-muted">{observasjon.sted}</h6>
+                         <p className="card-text">{observasjon.dato}</p>
+                         <p className="card-text">{observasjon.beskrivelse}</p>
+                     </div>
+                 </div>
+                )}
+            </div>
         );
     }
 
