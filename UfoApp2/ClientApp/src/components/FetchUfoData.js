@@ -1,4 +1,5 @@
 ﻿import React, { Component } from 'react';
+import "../custom.css";
 
 export class FetchUfoData extends Component {
     static displayName = FetchUfoData.name;
@@ -14,7 +15,7 @@ export class FetchUfoData extends Component {
 
     static renderObservasjonerTable(observasjoner) {
         return (
-            <div className='row'>
+            <div className="row">
                  {observasjoner.map(observasjon =>
                      <div key={observasjon.id} className="card col-6">
                      <div className="card-body">
@@ -36,7 +37,6 @@ export class FetchUfoData extends Component {
 
         return (
             <div>
-                <h1 id="tabelLabel">Ufo</h1>
                 {contents}
             </div>
         )
