@@ -2,9 +2,12 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using UfoApp2.DAL;
+using UfoApp2.Models;
 
 namespace UfoApp2
 {
@@ -28,6 +31,10 @@ namespace UfoApp2
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            services.AddDbContext<UfoContext>(options =>
+                            options.UseSqlite("Data Source=Observasjon.db"));
+            services.AddScoped<IUfoRepository, UfoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
