@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FetchUfoData } from './FetchUfoData';
+import { UfoForm } from './UfoForm';
 
 export class Home extends Component {
   static displayName = Home.name;
