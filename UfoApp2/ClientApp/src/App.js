@@ -24,6 +24,7 @@ export default class App extends Component {
           path="/explore-ufo/:id"
           component={ExploreUfo}
         />
+            <Route path='/fetch-innlogging' component={FetchInnlogging} />
       </Layout>
     );
   }
