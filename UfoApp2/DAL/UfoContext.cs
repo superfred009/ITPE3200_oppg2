@@ -14,9 +14,13 @@ namespace UfoApp2.Models
     public class Observasjoner
     {
         public int id { get; set; }
+        [RegularExpression(@"^[a-zA-zæøåÆØÅ0-9. \-]{2,50}$")]
         public string tittel { get; set; }
+        [RegularExpression(@"^[a-zA-zæøåÆØÅ0-9. \-]{2,20}$")]
         public string sted { get; set; }
+        [RegularExpression(@"^[0-9. \-]{6,8}$")]
         public string dato { get; set; }
+        [RegularExpression(@"^[a-zA-zæøåÆØÅ0-9. \-]{2,100}$")]
         public string beskrivelse { get; set; }
     }
 
