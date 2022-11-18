@@ -8,7 +8,6 @@ export class FetchUfoData extends Component {
     constructor(props) {
         super(props);
         this.state = { observasjoner: [], loading: true };
-
     }
 
     componentDidMount() {
