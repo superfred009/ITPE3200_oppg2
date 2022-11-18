@@ -9,8 +9,7 @@ export class Home extends Component {
     return (
       <div>
          <h1>UFO observasjoner</h1>
-            <FetchUfoData />
-            <innloggingsskjema />
+        <FetchUfoData/>
       </div>
     );
   }
