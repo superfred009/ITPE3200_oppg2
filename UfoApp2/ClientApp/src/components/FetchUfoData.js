@@ -1,4 +1,5 @@
 ﻿import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import "../custom.css";
 
 export class FetchUfoData extends Component {
@@ -19,7 +20,14 @@ export class FetchUfoData extends Component {
                  {observasjoner.map(observasjon =>
                      <div key={observasjon.id} className="card col-6">
                      <div className="card-body">
-                         <h5 className="card-title">{observasjon.tittel}</h5>
+                     <Link
+                        to={{
+                            pathname: `/explore-ufo/${observasjon.id}`,
+                            state: { observasjoner: observasjon }
+                        }}
+                        >
+                            <h5 className="card-title"><a>{observasjon.tittel}</a></h5>
+                        </Link>
                          <h6 className="card-subtitle mb-2 text-muted">{observasjon.sted}</h6>
                          <p className="card-text">{observasjon.dato}</p>
                          <p className="card-text">{observasjon.beskrivelse}</p>
