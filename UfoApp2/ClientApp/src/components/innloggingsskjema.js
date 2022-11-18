@@ -1,4 +1,9 @@
-﻿    render() {
+﻿import React, { Component } from 'react';
+
+export class Innloggingsskjema extends Component {
+    static displayName = Innloggingsskjema.name;
+
+    render() {
         return (
             <div>
                 <h1>Innlogging</h1>
@@ -18,7 +23,8 @@
                     <input class="btn btn-info btn-rounded mt-5" type="submit" name="submit" value="Logg inn">
                 </div>
                 <p class="text-center"><a class="btn btn-primary toggleForms">Registrering</a></p>
-        );
             </div>
-        )
+        );
     }
+}
+
