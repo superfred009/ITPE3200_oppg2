@@ -18,7 +18,6 @@ namespace UfoApp2.Controllers
         private readonly IUfoRepository _db;
         private ILogger<UfoController> _log;
 
-
         public UfoController(IUfoRepository db, ILogger<UfoController> log)
         {
             _db = db;
