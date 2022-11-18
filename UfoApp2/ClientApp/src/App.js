@@ -7,6 +7,7 @@ import { Counter } from './components/Counter';
 
 import './custom.css'
 import { FetchUfoData } from './components/FetchUfoData';
+import { Innloggingsskjema } from './components/Innloggingsskjema';
 
 export default class App extends Component {
   static displayName = App.name;
@@ -18,6 +19,8 @@ export default class App extends Component {
         <Route path='/counter' component={Counter} />
             <Route path='/fetch-data' component={FetchData} />
             <Route path='/fetch-ufo-data' component={FetchUfoData} />
+            <Route path='/logg-inn' component={Innloggingsskjema} />
+
       </Layout>
     );
   }

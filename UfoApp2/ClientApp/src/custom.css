@@ -16,3 +16,8 @@ code {
 .card-body:hover h5{
   text-decoration: underline;
 }
+
+.tester {
+    color: yellow;
+    background-color: blue;
+}

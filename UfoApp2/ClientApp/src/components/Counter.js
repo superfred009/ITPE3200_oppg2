@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../custom.css';
 
 export class Counter extends Component {
   static displayName = Counter.name;
@@ -16,8 +17,8 @@ export class Counter extends Component {
   }
 
   render() {
-    return (
-      <div>
+      return (
+          <div className="tester">
         <h1>Counter</h1>
 
         <p>This is a simple example of a React component.</p>
