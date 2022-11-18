@@ -30,3 +30,19 @@
 2022-11-18T12:00:04.6756137+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
 (node:14316) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
  (9f02d108)
+2022-11-18T12:47:53.4125952+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-18T12:47:53.4815633+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-18T12:47:53.5277461+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-18T12:48:04.5208929+01:00  [ERR] (node:4300) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (6be130c2)
+2022-11-18T12:48:04.5280296+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:4300) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (cf83ff74)
+2022-11-18T17:57:32.3421212+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-18T17:57:32.4758391+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-18T17:57:32.5580986+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-18T17:57:42.3168585+01:00  [ERR] (node:272) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (acfcd35c)
+2022-11-18T17:57:42.3217803+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:272) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (05bc8ee6)

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { FetchUfoData } from './FetchUfoData';
 import { UfoForm } from './UfoForm';
-import { Innloggingsskjema } from './Innloggingsskjema';
 import './custom.css';
 
 export class Home extends Component {
