@@ -19,19 +19,21 @@ export class FetchUfoData extends Component {
             <div className="row">
                  {observasjoner.map(observasjon =>
                      <div key={observasjon.id} className="card col-6">
-                     <div className="card-body">
+                     
                      <Link
                         to={{
                             pathname: `/explore-ufo/${observasjon.id}`,
                             state: { observasjoner: observasjon }
                         }}
                         >
-                            <h5 className="card-title"><a>{observasjon.tittel}</a></h5>
-                        </Link>
-                         <h6 className="card-subtitle mb-2 text-muted">{observasjon.sted}</h6>
+                            <div className="card-body">
+                            <h5 className="card-title">{observasjon.tittel}</h5>
+                            <h6 className="card-subtitle mb-2 text-muted">{observasjon.sted}</h6>
                          <p className="card-text">{observasjon.dato}</p>
                          <p className="card-text">{observasjon.beskrivelse}</p>
                      </div>
+                        </Link>
+                         
                  </div>
                 )}
             </div>
