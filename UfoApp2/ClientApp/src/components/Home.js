@@ -11,7 +11,6 @@ export class Home extends Component {
       <div>
          <h1>UFO observasjoner</h1>
             <FetchUfoData />
-           
             <Innlogging />
       </div>
     );
