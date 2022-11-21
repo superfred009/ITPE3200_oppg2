@@ -13,18 +13,18 @@ code {
   border-color: #1861ac;
 }
 
-
 .card {
   border: 0px;
   margin-bottom: 25px;
 }
 .card-body {
-  border: solid 0.5px;
+  border: solid 1px;
   border-color: grey;
   box-shadow: 10px 10px 5px grey;
+  border-radius: 10px;
 }
 .card-body:hover {
-  border: solid 1px;
+  border: solid 1.5px;
   border-color: black;
   box-shadow: 5px 5px 5px grey;
 }
