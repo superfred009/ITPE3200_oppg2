@@ -1,0 +1,10 @@
+2022-11-18T12:20:02.7535270+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2022-11-18T12:20:02.7568700+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2022-11-18T12:20:02.7570400+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-18T12:20:02.7570670+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-18T12:20:02.7571040+01:00  [INF] Content root path: "/Users/fredrikneby/Projects/UfoApp2/UfoApp2" (b5d60022)
+2022-11-18T12:20:07.9574240+01:00  [ERR] (node:33462) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (e40d687c)
+2022-11-18T12:20:07.9581590+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:33462) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (8da3c8d0)
