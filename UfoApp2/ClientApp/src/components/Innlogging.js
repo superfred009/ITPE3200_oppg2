@@ -7,10 +7,6 @@ export class Innlogging extends Component {
             <>
                 <title> UFO Register </title>
                 <meta httpEquiv="Content Type" content="text/html; charset=UTF-8" />
-                <link
-                    rel="stylesheet"
-                    href="http://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css"
-                />
                 <div className="container">
                     <h1>Logg inn</h1>
                     <form className="form">

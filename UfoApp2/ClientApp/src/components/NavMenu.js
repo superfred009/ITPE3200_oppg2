@@ -42,6 +42,9 @@ export class NavMenu extends Component {
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/fetch-ufo-data">Fetch Ufo data</NavLink>
                 </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} className="text-dark" to="/logg-inn">Logg inn</NavLink>
+                </NavItem>
               </ul>
             </Collapse>
           </Container>
