@@ -30,20 +30,15 @@ export class UfoForm extends Component {
             if (values.beskrivelse.trim().length < 1) {
               errors.beskrivelse = "Required";
             }
-            console.log(values);
             return errors;
           }}
           onSubmit={(values) => {
-            console.log("submit", values);
-
             const observasjon = {
               tittel: values.tittel,
               sted: values.sted,
               dato: values.dato,
               beskrivelse: values.beskrivelse,
             };
-
-            console.log("Observasjon", JSON.stringify(observasjon));
             fetch("ufo/lagre", {
               method: "POST",
               headers: {
@@ -55,18 +50,7 @@ export class UfoForm extends Component {
         >
           {({ values, errors, handleChange, handleBlur, handleSubmit }) => (
             <Form onSubmit={handleSubmit}>
-              <FormGroup
-              // error={errors.name && touched.name}
-              // label="Your name"
-              // variant="outlined"
-              // type="name"
-              // name="name"
-              // onChange={handleChange}
-              // onBlur={handleBlur}
-              // value={values.name}
-              // fullWidth
-              // className={classes.textField}
-              >
+              <FormGroup>
                 <Label htmlFor="tittel">Tittel</Label>
                 <Field
                   name="tittel"
