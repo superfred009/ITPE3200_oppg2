@@ -35,3 +35,8 @@ code {
 .card a:hover h5 {
     text-decoration: underline;
 }
+
+.error-msg {
+  color: red;
+  background-color: yellow;
+}
