@@ -13,6 +13,30 @@ code {
   border-color: #1861ac;
 }
 
-.card-body:hover h5{
-  text-decoration: underline;
+.card {
+  border: 0px;
+  margin-bottom: 25px;
+}
+.card-body {
+  border: solid 1px;
+  border-color: grey;
+  box-shadow: 10px 10px 5px grey;
+  border-radius: 10px;
+}
+.card-body:hover {
+  border: solid 1.5px;
+  border-color: black;
+  box-shadow: 5px 5px 5px grey;
+}
+.card a {
+  color: black;
+  text-decoration: none;
+}
+.card a:hover h5 {
+    text-decoration: underline;
+}
+
+.error-msg {
+  color: red;
+  background-color: yellow;
 }
