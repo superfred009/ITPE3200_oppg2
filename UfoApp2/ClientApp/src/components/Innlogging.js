@@ -45,28 +45,28 @@ export class Innlogging extends Component {
             )
     }
 }
-/*function loggInn() {
-    const brukernavnOK = validerBrukernavn($("#brukeravn").value());
-    const passordOK = validerPassord($("#passord").value());
+function loggInn() {
+    const brukernavnOK = validerBrukernavn(${this.props.brukernavn.value()});
+    const passordOK = validerPassord(${this.props.passord.value()});
 
     if (brukernavnOK && passordOK) {
         const bruker = {
-            brukernavn: $("#brukernavn").value(),
-            passord: $("#passord").value()
+            brukernavn: ${props.brukernavn}.value(),
+            passord: ${props.passord}.value()
         }
         $.post("Admin/Innlogging", bruker, function (OK) {
             if (OK) {
-                window.location.href = 'home.js';
+                window.location.href = 'Home.js';
             }
             else {
-                $("#feil").html("Feil brukernavn eller passord!");
+                <div>Feil brukernavn eller passord!</div>
             }
         })
         .fail(function () {
-            $("feil").html("Feil på server - prøv igjen senere!");
+            <div>Feil på server - prøv igjen senere.</div>
         })
     }
 
-}*/
+}
 
 
