@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2022-11-24T14:03:33.0879630+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
 2022-11-24T14:03:33.1167660+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
 2022-11-24T14:03:33.1207150+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
@@ -28,3 +29,13 @@
 2022-11-24T14:45:35.5063860+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
 (node:87998) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
  (11c18967)
+=======
+2022-11-24T15:10:57.0556728+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-24T15:10:57.0668373+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-24T15:10:57.0670474+01:00  [INF] Content root path: "C:\Users\hoela\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-24T15:11:05.0137312+01:00  [ERR] (node:3000) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (6197b034)
+2022-11-24T15:11:05.0150213+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:3000) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (c8f01e5b)
+>>>>>>> main
