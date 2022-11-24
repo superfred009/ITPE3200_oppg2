@@ -1,0 +1,30 @@
+2022-11-24T15:57:27.5816560+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2022-11-24T15:57:27.5929400+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2022-11-24T15:57:27.5969400+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-24T15:57:27.6003570+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-24T15:57:27.6036070+01:00  [INF] Content root path: "/Users/aleksanderaraya/Desktop/Mine applikasjoner/ITPE3200_oppg2/UfoApp2" (b5d60022)
+2022-11-24T15:57:32.1202470+01:00  [ERR] (node:89375) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (4eae6862)
+2022-11-24T15:57:32.1247900+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:89375) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (3ea70358)
+2022-11-24T15:58:57.2125500+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2022-11-24T15:58:57.2198450+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2022-11-24T15:58:57.2229760+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-24T15:58:57.2254320+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-24T15:58:57.2278300+01:00  [INF] Content root path: "/Users/aleksanderaraya/Desktop/Mine applikasjoner/ITPE3200_oppg2/UfoApp2" (b5d60022)
+2022-11-24T15:59:02.9960700+01:00  [ERR] (node:89440) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (fabe27ac)
+2022-11-24T15:59:03.0006870+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:89440) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (02290991)
+2022-11-24T16:02:07.0900540+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2022-11-24T16:02:07.0973950+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2022-11-24T16:02:07.1006350+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-24T16:02:07.1032340+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-24T16:02:07.1057960+01:00  [INF] Content root path: "/Users/aleksanderaraya/Desktop/Mine applikasjoner/ITPE3200_oppg2/UfoApp2" (b5d60022)
+2022-11-24T16:02:15.3247270+01:00  [ERR] (node:89525) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (ae1d543f)
+2022-11-24T16:02:15.3295010+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:89525) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (edd65413)
