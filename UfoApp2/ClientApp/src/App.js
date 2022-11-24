@@ -18,7 +18,7 @@ export default class App extends Component {
         <Route path='/counter' component={Counter} />
             <Route path='/fetch-data' component={FetchData} />
             <Route path='/fetch-ufo-data' component={FetchUfoData} />
-            <Route path='/fetch-innlogging' component={FetchInnlogging} />
+            
       </Layout>
     );
   }
