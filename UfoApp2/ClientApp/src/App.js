@@ -15,19 +15,11 @@ export default class App extends Component {
   render() {
     return (
       <Layout>
-<<<<<<< HEAD
-        <Route exact path='/' component={Home} />
-        <Route path='/counter' component={Counter} />
-            <Route path='/fetch-data' component={FetchData} />
-            <Route path='/fetch-ufo-data' component={FetchUfoData} />
-            
-=======
         <Route exact path="/" component={Home} />
         <Route path="/fetch-ufo-data" component={FetchUfoData} />
         <Route exact path="/explore-ufo/:id" component={ExploreUfo} />
         <Route path="/logg-inn" component={Innlogging} />
         <Route path="/ufo-form" component={UfoForm} />
->>>>>>> main
       </Layout>
     );
   }

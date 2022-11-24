@@ -47,7 +47,7 @@ export class Innlogging extends Component {
                         });
                     }}
                 >
-                {({ values, errors, handleChange, handleBlur, handleSubmit }) => {
+                {({ values, errors, handleChange, handleBlur, handleSubmit }) => (
                     <Form onSubmit={handleSubmit}>
                         <FormGroup>
                             <Label htmlFor="brukernavn">Brukernavn</Label>
@@ -93,7 +93,7 @@ export class Innlogging extends Component {
                         </Button>
 
                     </Form>
-                }}
+                )}
             </Formik>
          </Container>
         );
