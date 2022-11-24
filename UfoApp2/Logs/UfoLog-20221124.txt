@@ -18,3 +18,13 @@
 2022-11-24T14:04:35.7111650+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
 (node:86952) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
  (719c26a5)
+2022-11-24T14:45:30.0853090+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2022-11-24T14:45:30.0947350+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2022-11-24T14:45:30.0980930+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-24T14:45:30.1010220+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-24T14:45:30.1039090+01:00  [INF] Content root path: "/Users/aleksanderaraya/Desktop/Mine applikasjoner/ITPE3200_oppg2/UfoApp2" (b5d60022)
+2022-11-24T14:45:35.5020240+01:00  [ERR] (node:87998) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (89e4b989)
+2022-11-24T14:45:35.5063860+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:87998) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (11c18967)
