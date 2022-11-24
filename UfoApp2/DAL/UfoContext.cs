@@ -24,6 +24,14 @@ namespace UfoApp2.Models
         public string beskrivelse { get; set; }
     }
 
+    public class Brukere
+    {
+        public int Id { get; set; }
+        public string Brukernavn { get; set; }
+        public byte[] Passord { get; set; }
+        public byte[] Salt { get; set; }
+    }
+
     public class UfoContext : DbContext
     {
         public UfoContext(DbContextOptions<UfoContext> options)
@@ -36,6 +44,7 @@ namespace UfoApp2.Models
         }
 
         public DbSet<Observasjoner> ObservasjonerUFO { get; set; }
+        public DbSet<Brukere> Brukere { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

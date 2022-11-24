@@ -1,4 +1,6 @@
 ﻿import React, { Component } from 'react';
+import validerBrukernavn from './validering';
+import validerPassord from './validering';
 
 export class Innlogging extends Component {
     render() {
@@ -15,7 +17,7 @@ export class Innlogging extends Component {
                             <input
                                 type="text"
                                 id="brukernavn"
-                                onchange="validerBrukernavn(this.value)"
+                                onchange={validerBrukernavn(this.value)}
                             />
                             <span id="feilBrukernavn" style={{ color: "red" }} />
                         </div>
@@ -24,7 +26,7 @@ export class Innlogging extends Component {
                             <input
                                 type="password"
                                 id="passord"
-                                onchange="validerPassord(this.value)"
+                                onchange={validerPassord(this.value)}
                             />
                             <span id="feilPassord" style={{ color: "red" }} />
                         </div>
@@ -43,5 +45,28 @@ export class Innlogging extends Component {
             )
     }
 }
+/*function loggInn() {
+    const brukernavnOK = validerBrukernavn($("#brukeravn").value());
+    const passordOK = validerPassord($("#passord").value());
+
+    if (brukernavnOK && passordOK) {
+        const bruker = {
+            brukernavn: $("#brukernavn").value(),
+            passord: $("#passord").value()
+        }
+        $.post("Admin/Innlogging", bruker, function (OK) {
+            if (OK) {
+                window.location.href = 'home.js';
+            }
+            else {
+                $("#feil").html("Feil brukernavn eller passord!");
+            }
+        })
+        .fail(function () {
+            $("feil").html("Feil på server - prøv igjen senere!");
+        })
+    }
+
+}*/
 
 
