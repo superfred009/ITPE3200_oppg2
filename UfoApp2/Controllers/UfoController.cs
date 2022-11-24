@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace UfoApp2.Controllers
 {
+    [ApiController]
     [Route("[controller]/[action]")]
     public class UfoController : ControllerBase
     {
@@ -24,6 +25,7 @@ namespace UfoApp2.Controllers
             _log = log;
         }
 
+        [HttpPost]
         public async Task<ActionResult> Lagre(Observasjon innObservasjon)
         {
             if (ModelState.IsValid)
@@ -32,12 +34,12 @@ namespace UfoApp2.Controllers
                 if (!returOK)
                 {
                     _log.LogInformation("Observasjon ble ikke lagret!");
-                    return BadRequest("Observasjon ble ikke lagret!");
+                    return BadRequest();
                 }
-                return Ok("Observasjon lagret!");
+                return Ok();
             }
             _log.LogInformation("Feil i inputvalidering!");
-            return BadRequest("Feil i inputvalidering!");
+            return BadRequest();
         }
 
         public async Task<ActionResult> HentAlle()
