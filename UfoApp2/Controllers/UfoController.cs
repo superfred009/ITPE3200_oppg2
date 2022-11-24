@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UfoApp2.Models;
 using Microsoft.Extensions.Logging;
+using UfoApp2.Model;
 
 namespace UfoApp2.Controllers
 {
@@ -105,6 +106,21 @@ namespace UfoApp2.Controllers
             }
             _log.LogInformation("Feil i inpurtvalidering!");
             return BadRequest("Feil i inputvalidering!");
+        }
+        public async Task<ActionResult> LoggInn(Bruker bruker)
+        {
+            if (ModelState.IsValid)
+            {
+                bool returnOK = await _db.LoggInn(bruker);
+                if (!returnOK)
+                {
+                    _log.LogInformation("Innloggingen feilet for bruker" + bruker.Brukernavn);
+                    return Ok(false);
+                }
+                return Ok(true);
+            }
+            _log.LogInformation("Feil i inputvalidering");
+            return BadRequest("Feil i inputvalidering på server");
         }
 
     }

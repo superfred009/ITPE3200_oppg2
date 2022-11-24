@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SQLitePCL;
 using UfoApp2.Models;
+using UfoApp2.Model;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -169,9 +170,9 @@ namespace UfoApp2.DAL
                 }
                 return false;
             }
-            catch (Exception e)
+            catch 
             {
-                _log.LogInformation(e.Message);
+                //_log.LogInformation(e.Message);
                 return false;
             }
         }

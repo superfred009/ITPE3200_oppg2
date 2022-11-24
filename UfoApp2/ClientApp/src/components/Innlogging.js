@@ -1,72 +1,101 @@
 ﻿import React, { Component } from 'react';
 import validerBrukernavn from './validering';
 import validerPassord from './validering';
+import { FormGroup, Label, Input, Button, Container } from "reactstrap";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import "../custom.css";
 
 export class Innlogging extends Component {
+    static displayName = Innlogging.name;
+
     render() {
         return (
-
-            <>
-                <title> UFO Register </title>
-                <meta httpEquiv="Content Type" content="text/html; charset=UTF-8" />
-                <div className="container">
-                    <h1>Logg inn</h1>
-                    <form className="form">
-                        <div className="form-group">
-                            <label>Brukernavn</label>
-                            <input
+            <Container>
+                <Formik
+                    initialValues={{
+                        brukernavn: "",
+                        passord: "",
+                    }}
+                    validate={(values) => {
+                        const errors = {};
+                        if (!validerBrukernavn(values.brukernavn)) {
+                            errors.brukernavn = "Brukernavnet er feil";
+                        }
+                        if (!validerPassord(values.passord)) {
+                            errors.passord = "Passordet er feil";
+                        }
+                        return errors;
+                    }}
+                    onSubmit={(values) => {
+                        const bruker = {
+                            bruker: values.brukernavn,
+                            passord: values.passord,
+                        };
+                        fetch("ufo/LoggInn", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify(bruker),
+                        }).then((response) => {
+                            if (response.ok) {
+                                alert("Du logget inn!");
+                            }
+                            else {
+                                alert("Du logget IKKE inn!");
+                            }       
+                        });
+                    }}
+                >
+                {({ values, errors, handleChange, handleBlur, handleSubmit }) => {
+                    <Form onSubmit={handleSubmit}>
+                        <FormGroup>
+                            <Label htmlFor="brukernavn">Brukernavn</Label>
+                            <Field
+                                name="brukernavn"
                                 type="text"
+                                className="form-control"
                                 id="brukernavn"
-                                onchange={validerBrukernavn(this.value)}
+                                placeholder="Brukernavn"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                values={values.brukernavn}
                             />
-                            <span id="feilBrukernavn" style={{ color: "red" }} />
-                        </div>
-                        <div className="form-group">
-                            <label>Passord</label>
-                            <input
+                            <ErrorMessage
+                                className="error-msg"
+                                name="brukernavn"
+                                Component={Label}
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label htmlFor="passord">Passord</Label>
+                            <Field
+                                name="passord"
                                 type="password"
-                                id="passord"
-                                onchange={validerPassord(this.value)}
+                                className="form-control"
+                                id="brukernavn"
+                                placeholder="Passord"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                values={values.passord}
                             />
-                            <span id="feilPassord" style={{ color: "red" }} />
-                        </div>
-                        <div className="form-group">
-                            <input
-                                type="button"
-                                defaultValue="Logg Inn"
-                                onclick="loggInn()"
-                                className="btn btn-primary"
+                            <ErrorMessage
+                                className="error-msg"
+                                name="passord"
+                                Component={Label}
                             />
-                        </div>
-                        <div id="feil" style={{ color: "red" }} />
-                    </form>
-                </div>
-            </>
-            )
+                        </FormGroup>
+                        <Button
+                            type="submit"
+                            className="btn btn-primary"
+                        >
+                            Logg Inn
+                        </Button>
+
+                    </Form>
+                }}
+            </Formik>
+         </Container>
+        );
     }
 }
-function loggInn() {
-    const brukernavnOK = validerBrukernavn(${this.props.brukernavn.value()});
-    const passordOK = validerPassord(${this.props.passord.value()});
-
-    if (brukernavnOK && passordOK) {
-        const bruker = {
-            brukernavn: ${props.brukernavn}.value(),
-            passord: ${props.passord}.value()
-        }
-        $.post("Admin/Innlogging", bruker, function (OK) {
-            if (OK) {
-                window.location.href = 'Home.js';
-            }
-            else {
-                <div>Feil brukernavn eller passord!</div>
-            }
-        })
-        .fail(function () {
-            <div>Feil på server - prøv igjen senere.</div>
-        })
-    }
-
-}
-
-
