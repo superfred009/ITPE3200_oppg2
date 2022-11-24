@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FetchUfoData } from "./FetchUfoData";
+import { Innlogging } from "./Innlogging";
 
 export class Home extends Component {
   static displayName = Home.name;
@@ -8,7 +9,8 @@ export class Home extends Component {
     return (
       <div>
         <h1>UFO observasjoner</h1>
-        <FetchUfoData />
+            <FetchUfoData />
+            <Innlogging />
       </div>
     );
   }

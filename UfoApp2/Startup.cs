@@ -45,6 +45,7 @@ namespace UfoApp2
             {
                 app.UseDeveloperExceptionPage();
                 loggerFactory.AddFile("Logs/UfoLog.txt");
+                //DBInit.Initialize(app);
             }
             else
             {
