@@ -16,16 +16,6 @@ export class Innlogging extends Component {
                         brukernavn: "",
                         passord: "",
                     }}
-                    validate={(values) => {
-                        const errors = {};
-                        if (!validerBrukernavn(values.brukernavn)) {
-                            errors.brukernavn = "Brukernavnet er feil";
-                        }
-                        if (!validerPassord(values.passord)) {
-                            errors.passord = "Passordet er feil";
-                        }
-                        return errors;
-                    }}
                     onSubmit={(values) => {
                         const bruker = {
                             bruker: values.brukernavn,
@@ -47,7 +37,7 @@ export class Innlogging extends Component {
                         });
                     }}
                 >
-                {({ values, errors, handleChange, handleBlur, handleSubmit }) => {
+                    {({ values, errors, handleChange, handleBlur, handleSubmit }) => (
                     <Form onSubmit={handleSubmit}>
                         <FormGroup>
                             <Label htmlFor="brukernavn">Brukernavn</Label>
@@ -93,7 +83,7 @@ export class Innlogging extends Component {
                         </Button>
 
                     </Form>
-                }}
+                )}
             </Formik>
          </Container>
         );
