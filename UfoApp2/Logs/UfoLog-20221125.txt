@@ -1,0 +1,93 @@
+2022-11-25T16:55:13.2836222+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T16:55:13.3138076+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T16:55:13.3201864+01:00  [INF] Content root path: "C:\Users\Pdram\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T16:55:26.4528303+01:00  [ERR] (node:15344) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (fb7307d8)
+2022-11-25T16:55:26.4588851+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:15344) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (535b05ac)
+2022-11-25T16:56:00.7587376+01:00 40000002-0000-fd00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T16:56:37.3863794+01:00 40000004-0003-ff00-b63f-84710c7967bb [ERR] Failed executing DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Brukernavn\", \"b\".\"Passord\", \"b\".\"Salt\"
+FROM \"Brukere\" AS \"b\"
+WHERE \"b\".\"Brukernavn\" IS NULL
+LIMIT 1" (627a98df)
+2022-11-25T16:56:37.6633026+01:00 40000004-0003-ff00-b63f-84710c7967bb [ERR] An exception occurred while iterating over the results of a query for context type '"UfoApp2.Models.UfoContext"'."
+""Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Brukere'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()" (f5c7ac34)
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Brukere'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-11-25T16:56:37.8569490+01:00 40000004-0003-ff00-b63f-84710c7967bb [INF] Innloggingen feilet for bruker (13b46012)
+2022-11-25T17:05:23.0647493+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T17:05:23.1070095+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T17:05:23.1229391+01:00  [INF] Content root path: "C:\Users\Pdram\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T17:05:33.2514193+01:00  [ERR] (node:14820) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (2c983a71)
+2022-11-25T17:05:33.2558007+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:14820) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (a9e7501e)
+2022-11-25T17:05:49.2327684+01:00 40000003-0001-ff00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T17:08:39.2645930+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T17:08:39.2951163+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T17:08:39.2986868+01:00  [INF] Content root path: "C:\Users\Pdram\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T17:08:44.6245234+01:00  [ERR] (node:14780) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (b109b222)
+2022-11-25T17:08:44.6286058+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:14780) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (f73f2f28)
+2022-11-25T17:08:54.1103063+01:00 40000004-0000-fa00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T17:14:22.1347400+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T17:14:22.1456410+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T17:14:22.1497920+01:00  [INF] Content root path: "C:\Users\Pdram\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T17:14:27.9914812+01:00  [ERR] (node:8976) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (9f03a82b)
+2022-11-25T17:14:27.9964445+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:8976) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (f2bcf08f)
+2022-11-25T17:14:38.0154274+01:00 40000002-0001-fc00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T17:19:55.8499247+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T17:19:55.8683148+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T17:19:55.8765526+01:00  [INF] Content root path: "C:\Users\Pdram\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T17:20:02.5334616+01:00  [ERR] (node:2308) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (e855ee08)
+2022-11-25T17:20:02.5409634+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:2308) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (3b92c33e)
+2022-11-25T17:20:11.8060483+01:00 4000000d-0003-ff00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T17:22:11.7563715+01:00 4000000c-0001-fe00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T17:23:00.8967954+01:00 40000008-0003-fe00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T17:23:42.2883346+01:00 40000010-0001-fe00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T17:25:09.2771513+01:00 40000014-0001-fe00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T17:34:35.8603648+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T17:34:35.8792481+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T17:34:35.8822508+01:00  [INF] Content root path: "C:\Users\Pdram\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T17:34:41.5876439+01:00  [ERR] (node:14564) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (5a075f28)
+2022-11-25T17:34:41.5922843+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:14564) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (a8e6949f)
+2022-11-25T17:34:51.5753390+01:00 4000001a-0001-fe00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T17:36:22.5529104+01:00 4000001d-0001-fe00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T17:36:53.2166701+01:00 40000014-0003-ff00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)

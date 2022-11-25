@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { FetchUfoData } from "./FetchUfoData";
 import { Innlogging } from "./Innlogging";
+import { Footer } from "./Footer";
+
 
 export class Home extends Component {
   static displayName = Home.name;
@@ -11,6 +13,7 @@ export class Home extends Component {
         <h1>UFO observasjoner</h1>
             <FetchUfoData />
             <Innlogging />
+            <Footer />
       </div>
     );
   }
