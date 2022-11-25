@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Button, Container } from "reactstrap";
+import { Link } from "react-router-dom";
 import "../custom.css";
 
 export class ExploreUfo extends Component {
@@ -33,6 +35,18 @@ export class ExploreUfo extends Component {
             observasjon.sted
           }
         ></iframe>
+        <Container>
+          <Link
+            className="btn btn-primary"
+            to={{
+              pathname: `/rediger-ufo/${observasjon.id}`,
+              state: { observasjon: observasjon },
+            }}
+          >
+            Rediger
+          </Link>
+          <Button className="btn-danger">Slett</Button>
+        </Container>
       </div>
     );
   }
