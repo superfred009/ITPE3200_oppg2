@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FetchUfoData } from "./FetchUfoData";
-import { Innlogging } from "./Innlogging";
+
 
 export class Home extends Component {
   static displayName = Home.name;
