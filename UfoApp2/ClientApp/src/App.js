@@ -8,6 +8,7 @@ import "./custom.css";
 import { FetchUfoData } from "./components/FetchUfoData";
 import { Innlogging } from "./components/Innlogging";
 import { UfoForm } from "./components/UfoForm";
+import { LoggedInHome } from "./components/LoggedInHome";
 
 export default class App extends Component {
   static displayName = App.name;
@@ -19,7 +20,8 @@ export default class App extends Component {
         <Route path="/fetch-ufo-data" component={FetchUfoData} />
         <Route exact path="/explore-ufo/:id" component={ExploreUfo} />
         <Route path="/logg-inn" component={Innlogging} />
-        <Route path="/ufo-form" component={UfoForm} />
+            <Route path="/ufo-form" component={UfoForm} />
+            <Route path="/admin" component={LoggedInHome} />
       </Layout>
     );
   }
