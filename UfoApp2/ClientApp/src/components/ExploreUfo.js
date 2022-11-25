@@ -45,7 +45,16 @@ export class ExploreUfo extends Component {
           >
             Rediger
           </Link>
-          <Button className="btn-danger">Slett</Button>
+          <Button
+            className="btn-danger"
+            onClick={() => {
+              fetch("ufo/slett?id=" + observasjon.id).then(
+                (window.location.href = "/")
+              );
+            }}
+          >
+            Slett
+          </Button>
         </Container>
       </div>
     );

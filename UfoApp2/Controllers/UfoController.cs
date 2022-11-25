@@ -92,7 +92,7 @@ namespace UfoApp2.Controllers
             return Ok(observasjon);
         }
 
-        [HttpPost]
+        [HttpPut]
         public async Task<ActionResult> Endre(Observasjon endreObservasjon)
         {
             if (ModelState.IsValid)

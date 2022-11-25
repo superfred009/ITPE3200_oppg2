@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { FormGroup, Label, Input, Button, Container } from "reactstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import "../custom.css";
+import { Router } from "react-router";
 
 export class EditUfoForm extends Component {
   static displayName = EditUfoForm.name;
@@ -47,20 +48,20 @@ export class EditUfoForm extends Component {
           }}
           onSubmit={(values) => {
             const observasjon = {
-              id: this.props.match.params.id,
               tittel: values.tittel,
               sted: values.sted,
               dato: values.dato,
               beskrivelse: values.beskrivelse,
             };
-            console.log(JSON.stringify(observasjon));
-            fetch("ufo/endre", {
+            fetch("ufo/lagre", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
               },
               body: JSON.stringify(observasjon),
-            });
+            })
+              .then(fetch("ufo/slett?id=" + this.props.match.params.id))
+              .then(Router.push("/"));
           }}
         >
           {({ values, errors, handleChange, handleBlur, handleSubmit }) => (
