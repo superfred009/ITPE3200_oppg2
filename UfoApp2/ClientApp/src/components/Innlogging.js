@@ -29,10 +29,10 @@ export class Innlogging extends Component {
                             body: JSON.stringify(bruker),
                         }).then((response) => {
                             if (response.ok) {
-                                alert("Du logget inn!");
+                                this.props.history.push('/admin');
                             }
                             else {
-                                alert("Du logget IKKE inn!");
+                                alert("Prøv på nytt!");
                             }       
                         });
                     }}

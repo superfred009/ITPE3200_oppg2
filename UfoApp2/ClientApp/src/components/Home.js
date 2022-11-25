@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { FetchUfoData } from "./FetchUfoData";
-import { Innlogging } from "./Innlogging";
-import { Footer } from "./Footer";
 
 
 export class Home extends Component {
@@ -12,8 +10,6 @@ export class Home extends Component {
       <div>
         <h1>UFO observasjoner</h1>
             <FetchUfoData />
-            <Innlogging />
-            <Footer />
       </div>
     );
   }
