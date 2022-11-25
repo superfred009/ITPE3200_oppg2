@@ -1,0 +1,8 @@
+2022-11-20T20:54:01.7838996+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-20T20:54:01.7998844+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-20T20:54:01.8001414+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-20T20:54:14.4151448+01:00  [ERR] (node:8924) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (a057d5dd)
+2022-11-20T20:54:14.4184660+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:8924) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (03fdf4d2)

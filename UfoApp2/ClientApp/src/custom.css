@@ -13,11 +13,7 @@ code {
   border-color: #1861ac;
 }
 
-.card-body:hover h5{
-  text-decoration: underline;
-}
-
-.tester {
-    color: black;
-    background-color: blue;
+.card:hover {
+  border: solid 2px;
+  border-color: darkorange;
 }

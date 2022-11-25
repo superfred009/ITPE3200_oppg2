@@ -1,0 +1,91 @@
+2022-11-25T12:14:07.5336553+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T12:14:07.5504271+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T12:14:07.5547726+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T12:14:17.7900921+01:00  [ERR] (node:9760) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (c641f794)
+2022-11-25T12:14:17.7948234+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:9760) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (a6f8157e)
+2022-11-25T12:14:34.1730585+01:00 40000002-0001-fd00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T12:16:04.1161748+01:00 40000002-0002-fd00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T12:23:50.8255437+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T12:23:50.8428873+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T12:23:50.8537285+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T12:23:59.0373925+01:00  [ERR] (node:11832) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (3451a4c2)
+2022-11-25T12:23:59.0437477+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:11832) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (135edce3)
+2022-11-25T12:24:08.7304355+01:00 40000008-0003-fd00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T12:26:23.6543549+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T12:26:23.6698585+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T12:26:23.6746384+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T12:26:30.7532816+01:00  [ERR] (node:4424) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (a3a9d4cd)
+2022-11-25T12:26:30.7589421+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:4424) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (4cc7e2bc)
+2022-11-25T12:26:39.5960060+01:00 40000009-0000-fe00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T12:29:38.2430315+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T12:29:38.2594150+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T12:29:38.2693707+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T12:29:44.6935640+01:00  [ERR] (node:5200) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (b98c00cf)
+2022-11-25T12:29:44.6987304+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:5200) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (d6744020)
+2022-11-25T12:29:55.4508818+01:00 40000007-0003-fc00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T12:36:53.9875136+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T12:36:54.0332140+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T12:36:54.0579470+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T12:37:04.0693772+01:00  [ERR] (node:1680) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (7261a935)
+2022-11-25T12:37:04.0731216+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:1680) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (51910d31)
+2022-11-25T12:37:10.0812343+01:00 40000002-0000-fd00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T12:44:22.9884922+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T12:44:23.0321700+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T12:44:23.0458467+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T12:44:30.2998454+01:00  [ERR] (node:15036) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (3988783d)
+2022-11-25T12:44:30.3051672+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:15036) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (084e318a)
+2022-11-25T12:44:59.5625943+01:00 40000003-0003-fd00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T12:52:15.8976620+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T12:52:15.9416739+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T12:52:15.9657388+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T12:52:22.4499559+01:00  [ERR] (node:15936) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (5ab3927c)
+2022-11-25T12:52:22.4555491+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:15936) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (f3e23ba0)
+2022-11-25T12:52:30.6397706+01:00 40000005-0002-fe00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T13:02:01.5563840+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T13:02:01.5729214+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T13:02:01.5761841+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T13:02:13.8510364+01:00  [ERR] (node:14748) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (64b98be6)
+2022-11-25T13:02:13.9758127+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:14748) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (5e06bfb7)
+2022-11-25T13:02:28.8999160+01:00 40000006-0003-fd00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T13:18:31.2541586+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T13:18:31.3072270+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T13:18:31.3102830+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T13:18:47.8602660+01:00  [ERR] (node:1684) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (6d7ad402)
+2022-11-25T13:18:47.8698583+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:1684) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (7f256473)
+2022-11-25T13:19:05.5819268+01:00 40000002-0001-fc00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-25T15:14:08.0351221+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-25T15:14:08.0616745+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-25T15:14:08.0978020+01:00  [INF] Content root path: "C:\Users\Pdram\source\repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-25T15:14:21.0344541+01:00  [ERR] (node:13088) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (f727ca49)
+2022-11-25T15:14:21.0406187+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:13088) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (c413c5e2)
+2022-11-25T15:14:39.4790365+01:00 40000006-0000-fd00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)

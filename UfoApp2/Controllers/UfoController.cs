@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UfoApp2.Models;
 using Microsoft.Extensions.Logging;
+using UfoApp2.Model;
 
 namespace UfoApp2.Controllers
 {
+    [ApiController]
     [Route("[controller]/[action]")]
     public class UfoController : ControllerBase
     {
@@ -24,20 +26,21 @@ namespace UfoApp2.Controllers
             _log = log;
         }
 
+        [HttpPost]
         public async Task<ActionResult> Lagre(Observasjon innObservasjon)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 bool returOK = await _db.Lagre(innObservasjon);
-                if(!returOK)
+                if (!returOK)
                 {
                     _log.LogInformation("Observasjon ble ikke lagret!");
-                    return BadRequest("Observasjon ble ikke lagret!");
+                    return BadRequest();
                 }
-                return Ok("Observasjon lagret!");
-                }
+                return Ok();
+            }
             _log.LogInformation("Feil i inputvalidering!");
-            return BadRequest("Feil i inputvalidering!");
+            return BadRequest();
         }
 
         public async Task<ActionResult> HentAlle()
@@ -49,7 +52,7 @@ namespace UfoApp2.Controllers
         public async Task<ActionResult> Slett(int id)
         {
             bool returOK = await _db.Slett(id);
-            if(!returOK)
+            if (!returOK)
             {
                 _log.LogInformation("Observasjon ble ikke slettet!");
                 return NotFound("Observasjon ble ikke slettet!");
@@ -60,7 +63,7 @@ namespace UfoApp2.Controllers
         public async Task<ActionResult> neste(int id)
         {
             bool returOK = await _db.neste(id);
-            if(!returOK)
+            if (!returOK)
             {
                 _log.LogInformation("Neste observasjon ikke funnet!");
                 return NotFound("Neste observasjon ikke funnet!");
@@ -81,20 +84,20 @@ namespace UfoApp2.Controllers
         public async Task<ActionResult> HentEn(int id)
         {
             Observasjon observasjon = await _db.HentEn(id);
-            if(observasjon == null)
+            if (observasjon == null)
             {
                 _log.LogInformation("Fant ikke observasjonen!");
                 return NotFound("Fant ikke observasjonen!");
             }
-            return Ok("Observasjonen funnet!");
+            return Ok(observasjon);
         }
 
         public async Task<ActionResult> Endre(Observasjon endreObservasjon)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 bool returOK = await _db.Endre(endreObservasjon);
-                if(!returOK)
+                if (!returOK)
                 {
                     _log.LogInformation("Observasjonen ble ikke endret!");
                     return BadRequest("Observasjonen ble ikke endret!");
@@ -103,8 +106,22 @@ namespace UfoApp2.Controllers
             }
             _log.LogInformation("Feil i inpurtvalidering!");
             return BadRequest("Feil i inputvalidering!");
+        }
+        public async Task<ActionResult> LoggInn(Bruker bruker)
+        {
+            if (ModelState.IsValid)
+            {
+                bool returnOK = await _db.LoggInn(bruker);
+                if (!returnOK)
+                {
+                    _log.LogInformation("Innloggingen feilet for bruker" + bruker.Brukernavn);
+                    return Ok(false);
+                }
+                return Ok(true);
             }
+            _log.LogInformation("Feil i inputvalidering");
+            return BadRequest("Feil i inputvalidering på server");
+        }
 
     }
 }
-

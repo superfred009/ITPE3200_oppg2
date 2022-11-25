@@ -1,0 +1,40 @@
+2022-11-21T14:07:42.5944633+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-21T14:07:42.6091367+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-21T14:07:42.6093308+01:00  [INF] Content root path: "C:\Users\hoela\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-21T14:07:50.5633017+01:00  [ERR] (node:22228) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (20d72dec)
+2022-11-21T14:07:50.5652928+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:22228) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (947b703b)
+2022-11-21T14:50:58.9652186+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-21T14:50:58.9755147+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-21T14:50:58.9757751+01:00  [INF] Content root path: "C:\Users\hoela\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-21T14:51:04.7936588+01:00  [ERR] (node:10980) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (34fe5832)
+2022-11-21T14:51:04.7946523+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:10980) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (c9ca56cb)
+2022-11-21T14:54:00.5775338+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-21T14:54:00.5927763+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-21T14:54:00.5929770+01:00  [INF] Content root path: "C:\Users\hoela\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-21T14:54:06.8512100+01:00  [ERR] (node:15776) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (ce988e35)
+2022-11-21T14:54:06.8524546+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:15776) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (8a151a4b)
+2022-11-21T14:54:56.5134318+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-21T14:54:56.5591418+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-21T14:54:56.5596967+01:00  [INF] Content root path: "C:\Users\hoela\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-21T14:55:02.3276265+01:00  [ERR] (node:8500) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (ea6861a4)
+2022-11-21T14:55:02.3283808+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:8500) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (cfc8d672)
+2022-11-21T15:06:03.8616712+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-21T15:06:03.8797014+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-21T15:06:03.8799041+01:00  [INF] Content root path: "C:\Users\hoela\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-21T15:06:09.8891491+01:00  [ERR] (node:4000) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (be5298c1)
+2022-11-21T15:06:09.8900660+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:4000) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (418166b2)
