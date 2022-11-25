@@ -17,8 +17,6 @@ export class Footer extends Component {
 						.
 						<a href="#">Blog</a>
 						·
-						<a href="#">Pricing</a>
-						·
 						<a href="#">About</a>
 						·
 						<a href="#">Faq</a>
@@ -26,7 +24,7 @@ export class Footer extends Component {
 						<a href="#">Contact</a>
 					</p>
 
-					<p className="footer-company-name">Company Name © 2015</p>
+					<p className="footer-company-name">Gruppe 7 ITPE3200 © 2022</p>
 
 					<div className="footer-icons">
 
