@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import "../custom.css";
 
-export const FetchUfoData = () => {
+export const FetchUfoData = (isLoggedIn = false) => {
   const [observasjoner, setObservasjoner] = useState([]);
   const [loading, setLoading] = useState(true);
 
