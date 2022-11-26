@@ -1,34 +1,40 @@
-import React, { Component } from "react";
-import { FormGroup, Label, Input, Button, Container } from "reactstrap";
+import React, { useState, useEffect } from "react";
+import { FormGroup, Label, Button, Container } from "reactstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import "../custom.css";
 import { Router } from "react-router";
 
-export class EditUfoForm extends Component {
-  static displayName = EditUfoForm.name;
+export const EditUfoForm = () => {
+  const [observasjon, setObservasjon] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  constructor(props) {
-    super(props);
-    this.state = { observasjon: [], loading: true };
-  }
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(
+        "ufo/hentEn?id=" + this.props.match.params.id
+      );
+      const data = await response.json();
+      setObservasjon(data);
+      setLoading(false);
+    }
+    fetchData();
+  }, [observasjon]);
 
-  componentDidMount() {
-    this.populateUfoData();
-  }
-
-  render() {
-    return this.state.loading ? (
-      <div>
-        <p>Laster inn...</p>
-      </div>
-    ) : (
+  if (loading) {
+    return (
+      <p>
+        <em>Laster inn...</em>
+      </p>
+    );
+  } else {
+    return (
       <Container>
         <Formik
           initialValues={{
-            tittel: this.state.observasjon.tittel,
-            sted: this.state.observasjon.sted,
-            dato: this.state.observasjon.dato,
-            beskrivelse: this.state.observasjon.beskrivelse,
+            tittel: observasjon.tittel,
+            sted: observasjon.sted,
+            dato: observasjon.dato,
+            beskrivelse: observasjon.beskrivelse,
           }}
           validate={(values) => {
             const errors = {};
@@ -151,9 +157,4 @@ export class EditUfoForm extends Component {
       </Container>
     );
   }
-  async populateUfoData() {
-    const response = await fetch("ufo/hentEn?id=" + this.props.match.params.id);
-    const data = await response.json();
-    this.setState({ observasjon: data, loading: false });
-  }
-}
+};
