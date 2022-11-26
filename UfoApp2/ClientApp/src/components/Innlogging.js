@@ -24,14 +24,14 @@ export const Innlogging = () => {
             body: JSON.stringify(bruker),
           }).then((response) => {
             if (response.ok) {
-              this.props.history.push("/admin");
+              window.location.href = "/admin";
             } else {
-              alert("Prøv på nytt!");
+              alert("Feil brukernavn eller passord");
             }
           });
         }}
       >
-        {({ values, errors, handleChange, handleBlur, handleSubmit }) => (
+        {({ values, handleChange, handleBlur, handleSubmit }) => (
           <Form onSubmit={handleSubmit}>
             <FormGroup>
               <Label htmlFor="brukernavn">Brukernavn</Label>
@@ -57,7 +57,7 @@ export const Innlogging = () => {
                 name="passord"
                 type="password"
                 className="form-control"
-                id="brukernavn"
+                id="passord"
                 placeholder="Passord"
                 onChange={handleChange}
                 onBlur={handleBlur}

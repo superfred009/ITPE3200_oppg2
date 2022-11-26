@@ -3,21 +3,23 @@ import { FormGroup, Label, Button, Container } from "reactstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import "../custom.css";
 import { Router } from "react-router";
+import { useParams } from "react-router-dom";
 
 export const EditUfoForm = () => {
   const [observasjon, setObservasjon] = useState([]);
   const [loading, setLoading] = useState(true);
+  const params = useParams();
 
   useEffect(() => {
+    const ac = new AbortController();
     async function fetchData() {
-      const response = await fetch(
-        "ufo/hentEn?id=" + this.props.match.params.id
-      );
+      const response = await fetch("ufo/hentEn?id=" + params.id);
       const data = await response.json();
       setObservasjon(data);
       setLoading(false);
     }
     fetchData();
+    ac.abort();
   }, [observasjon]);
 
   if (loading) {
