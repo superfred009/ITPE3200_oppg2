@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { Home } from "./components/Home";
@@ -11,21 +11,18 @@ import { UfoForm } from "./components/UfoForm";
 import { EditUfoForm } from "./components/EditUfoForm";
 import { LoggedInHome } from "./components/LoggedInHome";
 
-export default class App extends Component {
-  static displayName = App.name;
+const App = () => {
+  return (
+    <Layout>
+      <Route exact path="/" component={Home} />
+      <Route path="/fetch-ufo-data" component={FetchUfoData} />
+      <Route exact path="/explore-ufo/:id" component={ExploreUfo} />
+      <Route path="/logg-inn" component={Innlogging} />
+      <Route path="/ufo-form" component={UfoForm} />
+      <Route exact path="/rediger-ufo/:id" component={EditUfoForm} />
+      <Route path="/admin" component={LoggedInHome} />
+    </Layout>
+  );
+};
 
-  render() {
-    return (
-      <Layout>
-        <Route exact path="/" component={Home} />
-        <Route path="/fetch-ufo-data" component={FetchUfoData} />
-        <Route exact path="/explore-ufo/:id" component={ExploreUfo} />
-        <Route path="/logg-inn" component={Innlogging} />
-        <Route path="/ufo-form" component={UfoForm} />
-        <Route exact path="/rediger-ufo/:id" component={EditUfoForm} />
-        <Route path="/ufo-form" component={UfoForm} />
-        <Route path="/admin" component={LoggedInHome} />
-      </Layout>
-    );
-  }
-}
+export default App;

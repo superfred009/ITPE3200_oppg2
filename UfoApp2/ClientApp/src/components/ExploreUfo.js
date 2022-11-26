@@ -1,21 +1,32 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Container } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../custom.css";
 
-export class ExploreUfo extends Component {
-  static displayName = ExploreUfo.name;
+export const ExploreUfo = () => {
+  const [observasjon, setObservasjon] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const params = useParams();
 
-  constructor(props) {
-    super(props);
-    this.state = { observasjon: [], loading: true };
-  }
+  useEffect(() => {
+    const ac = new AbortController();
+    async function fetchData() {
+      const response = await fetch("ufo/hentEn?id=" + params.id);
+      const data = await response.json();
+      setObservasjon(data);
+      setLoading(false);
+    }
+    fetchData();
+    ac.abort();
+  }, [observasjon]);
 
-  componentDidMount() {
-    this.populateUfoData();
-  }
-
-  static renderExplored(observasjon) {
+  if (loading) {
+    return (
+      <p>
+        <em>Loading ...</em>
+      </p>
+    );
+  } else {
     return (
       <div>
         <h1>{observasjon.tittel}</h1>
@@ -59,24 +70,4 @@ export class ExploreUfo extends Component {
       </div>
     );
   }
-
-  render() {
-    let contents = this.state.loading ? (
-      <p>
-        <em>Loading ...</em>
-      </p>
-    ) : (
-      ExploreUfo.renderExplored(this.state.observasjon)
-    );
-
-    return <div>{contents}</div>;
-  }
-
-  async populateUfoData() {
-    const response = await fetch("ufo/hentEn?id=" + this.props.match.params.id);
-    console.log("response: ", response);
-    const data = await response.json();
-    console.log("data: ", data);
-    this.setState({ observasjon: data, loading: false });
-  }
-}
+};
