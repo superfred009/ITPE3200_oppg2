@@ -1,10 +1,8 @@
-﻿import React, { Component } from "react";
+﻿import React from "react";
 import { FetchUfoData } from "./FetchUfoData";
-import { Innlogging } from "./Innlogging";
 
-export class LoggedInHome extends Component {
-    static displayName = LoggedInHome.name;
-   /*
+export const LoggedInHome = () => {
+  /*
     function islogged(nextState, replace, next) {
         if (!isLoggedIn) {
             replace({
@@ -13,10 +11,6 @@ export class LoggedInHome extends Component {
         }
         next();
     }*/
-    
-    render() {
-        return (
-            <FetchUfoData />
-        );
-    }
-}
+
+  return <FetchUfoData />;
+};

@@ -1,20 +1,28 @@
-﻿import React, { Component } from "react";
+﻿import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../custom.css";
 
-export class FetchUfoData extends Component {
-  static displayName = FetchUfoData.name;
+export const FetchUfoData = (isLoggedIn = false) => {
+  const [observasjoner, setObservasjoner] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  constructor(props) {
-    super(props);
-    this.state = { observasjoner: [], loading: true };
-  }
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("ufo/hentAlle");
+      const data = await response.json();
+      setObservasjoner(data);
+      setLoading(false);
+    }
+    fetchData();
+  }, [observasjoner]);
 
-  componentDidMount() {
-    this.populateUfoData();
-  }
-
-  static renderObservasjonerTable(observasjoner) {
+  if (loading) {
+    return (
+      <p>
+        <em>Loading ...</em>
+      </p>
+    );
+  } else {
     return (
       <div className="row">
         {observasjoner.map((observasjon) => (
@@ -39,22 +47,4 @@ export class FetchUfoData extends Component {
       </div>
     );
   }
-
-  render() {
-    let contents = this.state.loading ? (
-      <p>
-        <em>Loading ...</em>
-      </p>
-    ) : (
-      FetchUfoData.renderObservasjonerTable(this.state.observasjoner)
-    );
-
-    return <div>{contents}</div>;
-  }
-
-  async populateUfoData() {
-    const response = await fetch("ufo/hentAlle");
-    const data = await response.json();
-    this.setState({ observasjoner: data, loading: false });
-  }
-}
+};
