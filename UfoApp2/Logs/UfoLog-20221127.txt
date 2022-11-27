@@ -1,0 +1,14 @@
+2022-11-27T17:55:37.9081490+01:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2022-11-27T17:55:37.9144480+01:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2022-11-27T17:55:37.9174340+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-27T17:55:37.9199360+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-27T17:55:37.9223570+01:00  [INF] Content root path: "/Users/aleksanderaraya/Desktop/Mine applikasjoner/ITPE3200_oppg2/UfoApp2" (b5d60022)
+2022-11-27T17:55:42.6876870+01:00  [ERR] Browserslist: caniuse-lite is outdated. Please run:
+ (02daff8f)
+2022-11-27T17:55:43.2320450+01:00  [ERR]   npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+(node:94384) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (c484d1fa)
+2022-11-27T17:55:43.2369390+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:94384) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (ce4660f3)
