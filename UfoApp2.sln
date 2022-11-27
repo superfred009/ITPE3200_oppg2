@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1703.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UfoApp2", "UfoApp2\UfoApp2.csproj", "{0D8DCC40-496F-4FE4-BA98-D3810E929D7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UfoTesting", "UfoTesting\UfoTesting.csproj", "{11B76C21-061B-47F4-937B-96BBC4FE1498}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
