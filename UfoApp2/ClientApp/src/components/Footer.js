@@ -10,8 +10,6 @@ export class Footer extends Component {
 
 				<div className="footer-left">
 
-					<h3>Company<span>logo</span></h3>
-
 					<p className="footer-links">
 						<a href="#">Home</a>
 						.
