@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { FormGroup, Label, Button, Container } from "reactstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import "../custom.css";
-import { Router } from "react-router";
 import { useParams } from "react-router-dom";
 
 export const EditUfoForm = () => {
   const [observasjon, setObservasjon] = useState([]);
   const [loading, setLoading] = useState(true);
   const params = useParams();
+
+  window.scrollTo(0, 0);
 
   useEffect(() => {
     const ac = new AbortController();
@@ -20,7 +21,7 @@ export const EditUfoForm = () => {
     }
     fetchData();
     ac.abort();
-  }, [observasjon]);
+  }, []);
 
   if (loading) {
     return (
@@ -68,8 +69,8 @@ export const EditUfoForm = () => {
               },
               body: JSON.stringify(observasjon),
             })
-              .then(fetch("ufo/slett?id=" + this.props.match.params.id))
-              .then(Router.push("/"));
+              .then(fetch("ufo/slett?id=" + params.id))
+              .then((window.location.href = "/"));
           }}
         >
           {({ values, errors, handleChange, handleBlur, handleSubmit }) => (
@@ -152,7 +153,6 @@ export const EditUfoForm = () => {
               >
                 Submit
               </Button>
-              <div>{JSON.stringify({ ...values, ...errors })}</div>
             </Form>
           )}
         </Formik>
