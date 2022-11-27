@@ -8,6 +8,8 @@ export const ExploreUfo = () => {
   const [loading, setLoading] = useState(true);
   const params = useParams();
 
+  window.scrollTo(0, 0);
+
   useEffect(() => {
     const ac = new AbortController();
     async function fetchData() {

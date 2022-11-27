@@ -42,7 +42,7 @@ export const UfoForm = () => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(observasjon),
-          });
+          }).then((window.location.href = "/"));
         }}
       >
         {({ values, errors, handleChange, handleBlur, handleSubmit }) => (
@@ -125,7 +125,6 @@ export const UfoForm = () => {
             >
               Submit
             </Button>
-            <div>{JSON.stringify({ ...values, ...errors })}</div>
           </Form>
         )}
       </Formik>
