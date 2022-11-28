@@ -1,0 +1,16 @@
+2022-11-28T23:11:49.3248745+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-28T23:11:49.5338675+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-28T23:11:49.5374322+01:00  [INF] Content root path: "C:\Users\Pdram\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-28T23:12:15.9727933+01:00  [ERR] Browserslist: caniuse-lite is outdated. Please run:
+ (02daff8f)
+2022-11-28T23:12:17.4400237+01:00  [ERR]   npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+(node:15560) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (3701d3eb)
+2022-11-28T23:12:17.4700295+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:15560) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (4fcf52b6)
+2022-11-28T23:12:45.6095232+01:00 40000002-0002-ff00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-28T23:25:09.6775272+01:00 40000fc6-0000-fe00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-28T23:25:35.3372942+01:00 400039bc-0001-ff00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-28T23:27:32.5173010+01:00 400011ba-0000-fe00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
