@@ -2,33 +2,20 @@
 import { FormGroup, Label, Button, Container } from "reactstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import "../custom.css";
+import { loggInn } from "./utils";
 
 export const Innlogging = () => {
   return (
     <Container>
+      <h1>Innlogging</h1>
+      <p>For å endre eller slette observasjoner må du logge inn</p>
       <Formik
         initialValues={{
           brukernavn: "",
           passord: "",
         }}
         onSubmit={(values) => {
-          const bruker = {
-            bruker: values.brukernavn,
-            passord: values.passord,
-          };
-          fetch("ufo/LoggInn", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(bruker),
-          }).then((response) => {
-            if (response.ok) {
-              window.location.href = "/admin";
-            } else {
-              alert("Feil brukernavn eller passord");
-            }
-          });
+          loggInn(values.brukernavn, values.passord);
         }}
       >
         {({ values, handleChange, handleBlur, handleSubmit }) => (

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using UfoApp2.Controllers;
 using UfoApp2.Models;
@@ -23,7 +24,7 @@ namespace UfoTesting
                 tittel = "UFO Landing",
                 sted = "Oslo",
                 dato = "16.11.2022",
-                beskrivelse = "UFO landa på Oslomet"
+                beskrivelse = "UFO landa pï¿½ Oslomet"
             };
             var mockObs = new Mock<IUfoRepository>();
             mockObs.Setup(o => o.Lagre(innObservasjon)).ReturnsAsync(true);
@@ -39,12 +40,68 @@ namespace UfoTesting
         [Fact]
         public async Task Observasjon_HentAlle_Test()
         {
+            var observasjon1 = new Observasjon
+            {
+                id = 1,
+                tittel = "UFO Landing",
+                sted = "Oslo",
+                dato = "16.11.2022",
+                beskrivelse = "UFO landa pï¿½ Oslomet"
+            };
+            var observasjon2 = new Observasjon
+            {
+                id = 2,
+                tittel = "UFO pÃ¥ sopra steria",
+                sted = "Oslo",
+                dato = "01.10.2022",
+                beskrivelse = "Landa en UFO pÃ¥ sopra steria sitt hovedkontor"
+            };
+            var observasjon3 = new Observasjon
+            {
+                id = 3,
+                tittel = "UFO i Odda",
+                sted = "Odda",
+                dato = "07.10.2022",
+                beskrivelse = "UFO i Odda"
+            };
 
+            var observasjon4 = new Observasjon
+            {
+                id = 4,
+                tittel = "UFO sett svevende over sport 33",
+                sted = "Oslo",
+                dato = "22.09.2022",
+                beskrivelse = "UFO"
+            };
+
+            var observasjonListe = new List<Observasjon>();
+            observasjonListe.Add(observasjon1);
+            observasjonListe.Add(observasjon2);
+            observasjonListe.Add(observasjon3);
+            observasjonListe.Add(observasjon4);
+
+            var mockObs = new Mock<IUfoRepository>();
+            mockObs.Setup(k => k.HentAlle()).ReturnsAsync(() => null);
+            var mockLog = new Mock<ILogger<UfoController>>();
+            ILogger<UfoController> logger = mockLog.Object;
+            UfoController service = new UfoController(mockObs.Object, logger);
+            var result = await service.HentAlle() as ObjectResult;
+            var actualResult = result.Value;
+            Assert.Equal<List<Observasjon>>(observasjonListe, (List<Observasjon>)actualResult);
         }
 
         [Fact]
         public async Task Observasjon_Slett_Test()
         {
+            var mock = new Mock<IUfoRepository>();
+            mock.Setup(k => k.Slett((1))).ReturnsAsync(true);
+            var mockLog = new Mock<ILogger<UfoController>>();
+            ILogger<UfoController> logger = mockLog.Object;
+            UfoController service = new UfoController(mock.Object, logger);
+            var resultat = await service.Slett(1) as ObjectResult;
+            var actualResult = resultat.Value;
+            Assert.True((bool)actualResult);
+
 
         }
 
@@ -57,7 +114,7 @@ namespace UfoTesting
                 tittel = "UFO Landing",
                 sted = "Oslo",
                 dato = "16.11.2022",
-                beskrivelse = "UFO landa på Oslomet"
+                beskrivelse = "UFO landa pï¿½ Oslomet"
             };
             var mockObs = new Mock<IUfoRepository>();
             mockObs.Setup(o => o.HentEn(observasjon.id)).ReturnsAsync(observasjon);
@@ -67,6 +124,26 @@ namespace UfoTesting
             var result = await service.HentEn(observasjon.id) as ObjectResult;
             var actualResult = result.Value;
             Assert.NotNull(actualResult);
+        }
+
+        [Fact]
+        public async Task Observasjon_Endre_Test()
+        {
+            var endreObservasjon = new Observasjon
+            {
+                id = 1,
+                tittel = "UFO Landing",
+                sted = "Oslo",
+                dato = "16.11.2022",
+                beskrivelse = "UFO landa pÃ¥ Oslomet"
+            };
+            var mockObs = new Mock<IUfoRepository>();
+            mockObs.Setup(o => o.Endre(endreObservasjon)).ReturnsAsync(true);
+            var mockLog = new Mock<ILogger<UfoController>>();
+            ILogger<UfoController> logger = mockLog.Object;
+            var ufoController = new UfoController(mockObs.Object, logger);
+            var result = await ufoController.Endre(endreObservasjon);
+            Assert.NotNull(result);
         }
     }
 }

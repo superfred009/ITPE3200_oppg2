@@ -12,13 +12,10 @@ import { Link } from "react-router-dom";
 import "./NavMenu.css";
 
 export const NavMenu = () => {
-  //const toggleNavbar = toggleNavbar.bind(this);
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => {
-    setCollapsed({
-      collapsed: !collapsed,
-    });
+    setCollapsed(!collapsed);
   };
 
   return (
@@ -29,7 +26,7 @@ export const NavMenu = () => {
       >
         <Container>
           <NavbarBrand tag={Link} to="/">
-            UfoApp2
+            Ufo Observasjoner
           </NavbarBrand>
           <NavbarToggler onClick={toggleNavbar} className="mr-2" />
           <Collapse
@@ -44,13 +41,8 @@ export const NavMenu = () => {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/fetch-ufo-data">
-                  Fetch Ufo data
-                </NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink tag={Link} className="text-dark" to="/ufo-form">
-                  Ufo Form
+                  Registrer observasjon
                 </NavLink>
               </NavItem>
               <NavItem>

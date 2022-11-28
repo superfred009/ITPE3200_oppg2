@@ -7,7 +7,7 @@ export const Layout = (props) => {
   return (
     <div>
       <NavMenu />
-      <Container>{props.children}</Container>
+      <Container className="layout">{props.children}</Container>
       <Footer />
     </div>
   );

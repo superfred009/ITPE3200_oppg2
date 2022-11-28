@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using UfoApp2.Models;
 using Microsoft.Extensions.Logging;
 using UfoApp2.Model;
+using Microsoft.AspNetCore.Http;
 
 namespace UfoApp2.Controllers
 {
@@ -19,6 +20,8 @@ namespace UfoApp2.Controllers
 
         private readonly IUfoRepository _db;
         private ILogger<UfoController> _log;
+
+        private const string _loggetInn = "loggetInn";
 
         public UfoController(IUfoRepository db, ILogger<UfoController> log)
         {
@@ -51,6 +54,10 @@ namespace UfoApp2.Controllers
 
         public async Task<ActionResult> Slett(int id)
         {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
+            {
+                return Unauthorized();
+            }
             bool returOK = await _db.Slett(id);
             if (!returOK)
             {
@@ -58,27 +65,6 @@ namespace UfoApp2.Controllers
                 return NotFound("Observasjon ble ikke slettet!");
             }
             return Ok("Observasjon ble slettet!");
-        }
-
-        public async Task<ActionResult> neste(int id)
-        {
-            bool returOK = await _db.neste(id);
-            if (!returOK)
-            {
-                _log.LogInformation("Neste observasjon ikke funnet!");
-                return NotFound("Neste observasjon ikke funnet!");
-            }
-            return Ok("Neste observasjon funnet!");
-        }
-        public async Task<ActionResult> forrige(int id)
-        {
-            bool returOK = await _db.forrige(id);
-            if (!returOK)
-            {
-                _log.LogInformation("Forrige observasjon ikke funnet!");
-                return NotFound("Forrige observasjon ikke funnet!");
-            }
-            return Ok("Forrige observasjon funnet!");
         }
 
         public async Task<ActionResult> HentEn(int id)
@@ -95,6 +81,10 @@ namespace UfoApp2.Controllers
         [HttpPut]
         public async Task<ActionResult> Endre(Observasjon endreObservasjon)
         {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
+            {
+                return Unauthorized();
+            }
             if (ModelState.IsValid)
             {
                 bool returOK = await _db.Endre(endreObservasjon);
@@ -108,6 +98,8 @@ namespace UfoApp2.Controllers
             _log.LogInformation("Feil i inpurtvalidering!");
             return BadRequest("Feil i inputvalidering!");
         }
+
+        [HttpPost]
         public async Task<ActionResult> LoggInn(Bruker bruker)
         {
             if (ModelState.IsValid)
@@ -116,12 +108,18 @@ namespace UfoApp2.Controllers
                 if (!returnOK)
                 {
                     _log.LogInformation("Innloggingen feilet for bruker" + bruker.Brukernavn);
+                    HttpContext.Session.SetString(_loggetInn, "");
                     return Ok(false);
                 }
+                HttpContext.Session.SetString(_loggetInn, "LoggetInn");
                 return Ok(true);
             }
             _log.LogInformation("Feil i inputvalidering");
             return BadRequest("Feil i inputvalidering på server");
+        }
+        public void LoggUt()
+        {
+            HttpContext.Session.SetString(_loggetInn, "");
         }
 
     }

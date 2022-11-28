@@ -8,6 +8,8 @@ export const ExploreUfo = () => {
   const [loading, setLoading] = useState(true);
   const params = useParams();
 
+  window.scrollTo(0, 0);
+
   useEffect(() => {
     const ac = new AbortController();
     async function fetchData() {
@@ -46,27 +48,6 @@ export const ExploreUfo = () => {
             observasjon.sted
           }
         ></iframe>
-        <Container>
-          <Link
-            className="btn btn-primary"
-            to={{
-              pathname: `/rediger-ufo/${observasjon.id}`,
-              state: { observasjon: observasjon },
-            }}
-          >
-            Rediger
-          </Link>
-          <Button
-            className="btn-danger"
-            onClick={() => {
-              fetch("ufo/slett?id=" + observasjon.id).then(
-                (window.location.href = "/")
-              );
-            }}
-          >
-            Slett
-          </Button>
-        </Container>
       </div>
     );
   }

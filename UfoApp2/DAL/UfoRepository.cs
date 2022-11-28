@@ -80,32 +80,6 @@ namespace UfoApp2.DAL
                 return false;
             }
         }
-        public async Task<bool> neste(int id)
-        {
-            try
-            {
-                Observasjoner enObservasjon = await _db.ObservasjonerUFO.FindAsync(id);
-                await _db.SaveChangesAsync();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-        public async Task<bool> forrige(int id)
-        {
-            try
-            {
-                Observasjoner enObservasjon = await _db.ObservasjonerUFO.FindAsync(id);
-                await _db.SaveChangesAsync();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
 
         public async Task<Observasjon> HentEn(int id)
         {
@@ -164,13 +138,13 @@ namespace UfoApp2.DAL
                 //Sjekk passordet
                 byte[] hash = LagHash(bruker.Passord, funnetBruker.Salt);
                 bool ok = hash.SequenceEqual(funnetBruker.Passord);
-                if (!ok)
+                if (ok)
                 {
                     return true;
                 }
                 return false;
             }
-            catch 
+            catch
             {
                 //_log.LogInformation(e.Message);
                 return false;
