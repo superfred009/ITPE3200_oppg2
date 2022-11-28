@@ -2,6 +2,7 @@ import React from "react";
 import { FormGroup, Label, Button, Container } from "reactstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import "../custom.css";
+import { lagreEn } from "./utils";
 
 export const UfoForm = () => {
   return (
@@ -30,19 +31,7 @@ export const UfoForm = () => {
           return errors;
         }}
         onSubmit={(values) => {
-          const observasjon = {
-            tittel: values.tittel,
-            sted: values.sted,
-            dato: values.dato,
-            beskrivelse: values.beskrivelse,
-          };
-          fetch("ufo/lagre", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(observasjon),
-          }).then((window.location.href = "/"));
+          lagreEn(values.tittel, values.sted, values.dato, values.beskrivelse);
         }}
       >
         {({ values, errors, handleChange, handleBlur, handleSubmit }) => (

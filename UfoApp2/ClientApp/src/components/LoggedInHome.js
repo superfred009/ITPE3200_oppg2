@@ -2,7 +2,7 @@
 import { Button, Container } from "reactstrap";
 import { Link, useParams } from "react-router-dom";
 import "../custom.css";
-import { slettEn } from "./validering";
+import { slettEn } from "./utils";
 
 export const LoggedInHome = () => {
   const [observasjoner, setObservasjoner] = useState([]);
@@ -30,9 +30,11 @@ export const LoggedInHome = () => {
         <Container className="admin-wrapper">
           <h1>UFO Administrator</h1>
           <p>Her kan du endre og slette de registrerte observasjonene</p>
-          <Link to="/" className="btn btn-primary">
+          <Button onClick={() => {
+            fetch("ufo/loggut").then(window.location.href = "/");
+          }} className="btn btn-primary">
             Logg ut
-          </Link>
+          </Button>
         </Container>
         <div className="row">
           {observasjoner.map((observasjon) => (
