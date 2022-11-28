@@ -48,27 +48,6 @@ export const ExploreUfo = () => {
             observasjon.sted
           }
         ></iframe>
-        <Container>
-          <Link
-            className="btn btn-primary"
-            to={{
-              pathname: `/rediger-ufo/${observasjon.id}`,
-              state: { observasjon: observasjon },
-            }}
-          >
-            Rediger
-          </Link>
-          <Button
-            className="btn-danger"
-            onClick={() => {
-              fetch("ufo/slett?id=" + observasjon.id).then(
-                (window.location.href = "/")
-              );
-            }}
-          >
-            Slett
-          </Button>
-        </Container>
       </div>
     );
   }
