@@ -56,3 +56,15 @@ input:invalid[focused="true"] ~ span{
 .edit-container a {
   margin-right: 20px;
 }
+
+.admin-wrapper {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px; 
+}
+
+.home-wrapper {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px; 
+}

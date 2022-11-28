@@ -70,7 +70,7 @@ export const EditUfoForm = () => {
               body: JSON.stringify(observasjon),
             })
               .then(fetch("ufo/slett?id=" + params.id))
-              .then((window.location.href = "/"));
+              .then((window.location.href = "/admin"));
           }}
         >
           {({ values, errors, handleChange, handleBlur, handleSubmit }) => (
