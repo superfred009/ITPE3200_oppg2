@@ -2,6 +2,7 @@
 import { FormGroup, Label, Button, Container } from "reactstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import "../custom.css";
+import { loggInn } from "./validering";
 
 export const Innlogging = () => {
   return (
@@ -12,23 +13,19 @@ export const Innlogging = () => {
           passord: "",
         }}
         onSubmit={(values) => {
-          const bruker = {
-            bruker: values.brukernavn,
-            passord: values.passord,
-          };
-          fetch("ufo/LoggInn", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(bruker),
-          }).then((response) => {
-            if (response.ok) {
-              window.location.href = "/admin";
-            } else {
-              alert("Feil brukernavn eller passord");
-            }
-          });
+          loggInn(values.brukernavn, values.passord);
+
+          // const bruker = {
+          //   bruker: values.brukernavn,
+          //   passord: values.passord,
+          // };
+          // fetch("ufo/LoggInn", JSON.stringify(bruker)).then((response) => {
+          //   if (response.ok) {
+          //     window.location.href = "/admin";
+          //   } else {
+          //     alert("Feil brukernavn eller passord");
+          //   }
+          // });
         }}
       >
         {({ values, handleChange, handleBlur, handleSubmit }) => (
