@@ -26,7 +26,7 @@ export const NavMenu = () => {
       >
         <Container>
           <NavbarBrand tag={Link} to="/">
-            UfoApp2
+            Ufo Observasjoner
           </NavbarBrand>
           <NavbarToggler onClick={toggleNavbar} className="mr-2" />
           <Collapse
