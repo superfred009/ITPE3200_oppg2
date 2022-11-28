@@ -125,5 +125,25 @@ namespace UfoTesting
             var actualResult = result.Value;
             Assert.NotNull(actualResult);
         }
+
+        [Fact]
+        public async Task Observasjon_Endre_Test()
+        {
+            var endreObservasjon = new Observasjon
+            {
+                id = 1,
+                tittel = "UFO Landing",
+                sted = "Oslo",
+                dato = "16.11.2022",
+                beskrivelse = "UFO landa på Oslomet"
+            };
+            var mockObs = new Mock<IUfoRepository>();
+            mockObs.Setup(o => o.Endre(endreObservasjon)).ReturnsAsync(true);
+            var mockLog = new Mock<ILogger<UfoController>>();
+            ILogger<UfoController> logger = mockLog.Object;
+            var ufoController = new UfoController(mockObs.Object, logger);
+            var result = await ufoController.Endre(endreObservasjon);
+            Assert.NotNull(result);
+        }
     }
 }

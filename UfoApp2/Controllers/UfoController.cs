@@ -67,27 +67,6 @@ namespace UfoApp2.Controllers
             return Ok("Observasjon ble slettet!");
         }
 
-        public async Task<ActionResult> neste(int id)
-        {
-            bool returOK = await _db.neste(id);
-            if (!returOK)
-            {
-                _log.LogInformation("Neste observasjon ikke funnet!");
-                return NotFound("Neste observasjon ikke funnet!");
-            }
-            return Ok("Neste observasjon funnet!");
-        }
-        public async Task<ActionResult> forrige(int id)
-        {
-            bool returOK = await _db.forrige(id);
-            if (!returOK)
-            {
-                _log.LogInformation("Forrige observasjon ikke funnet!");
-                return NotFound("Forrige observasjon ikke funnet!");
-            }
-            return Ok("Forrige observasjon funnet!");
-        }
-
         public async Task<ActionResult> HentEn(int id)
         {
             Observasjon observasjon = await _db.HentEn(id);
