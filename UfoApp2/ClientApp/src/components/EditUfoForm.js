@@ -3,6 +3,7 @@ import { FormGroup, Label, Button, Container } from "reactstrap";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import "../custom.css";
 import { useParams } from "react-router-dom";
+import { endreEn } from "./utils";
 
 export const EditUfoForm = () => {
   const [observasjon, setObservasjon] = useState([]);
@@ -56,21 +57,7 @@ export const EditUfoForm = () => {
             return errors;
           }}
           onSubmit={(values) => {
-            const observasjon = {
-              tittel: values.tittel,
-              sted: values.sted,
-              dato: values.dato,
-              beskrivelse: values.beskrivelse,
-            };
-            fetch("ufo/lagre", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(observasjon),
-            })
-              .then(fetch("ufo/slett?id=" + params.id))
-              .then((window.location.href = "/admin"));
+            endreEn(params.id, values.tittel, values.sted, values.dato, values.beskrivelse);
           }}
         >
           {({ values, errors, handleChange, handleBlur, handleSubmit }) => (
