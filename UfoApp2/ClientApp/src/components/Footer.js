@@ -1,12 +1,13 @@
 ﻿import React from "react";
 import "./Footer.css";
-import logo from "../images/alien.png";
 
 export const Footer = () => {
   return (
     <footer className="footer-distributed">
       <div className="footer-left">
-        <img src={logo} alt="alien logo" className="alien-logo" />
+        <h3>
+          Company<span>logo</span>
+        </h3>
 
         <p className="footer-links">
           <a href="#">Home</a>.<a href="#">Blog</a>·<a href="#">About</a>·
