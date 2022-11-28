@@ -45,7 +45,7 @@ export const loggInn = (brukernavn, passord) => {
     Passord: passord,
   });
   fetch("ufo/LoggInn", {
-    method: `POST`,
+    method: "POST",
     headers: {
       "Content-Type": "application/json",
     },

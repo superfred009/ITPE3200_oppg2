@@ -164,13 +164,13 @@ namespace UfoApp2.DAL
                 //Sjekk passordet
                 byte[] hash = LagHash(bruker.Passord, funnetBruker.Salt);
                 bool ok = hash.SequenceEqual(funnetBruker.Passord);
-                if (!ok)
+                if (ok)
                 {
                     return true;
                 }
                 return false;
             }
-            catch 
+            catch
             {
                 //_log.LogInformation(e.Message);
                 return false;
