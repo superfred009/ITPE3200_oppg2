@@ -2,6 +2,7 @@
 import { Button, Container } from "reactstrap";
 import { Link, useParams } from "react-router-dom";
 import "../custom.css";
+import { slettEn } from "./validering";
 
 export const LoggedInHome = () => {
   const [observasjoner, setObservasjoner] = useState([]);
@@ -55,11 +56,7 @@ export const LoggedInHome = () => {
                   </Link>
                   <Button
                     className="btn-danger"
-                    onClick={() => {
-                      fetch("ufo/slett?id=" + observasjon.id).then(
-                        (window.location.href = "/")
-                      );
-                    }}
+                    onClick={() => slettEn(observasjon.id)}
                   >
                     Slett
                   </Button>

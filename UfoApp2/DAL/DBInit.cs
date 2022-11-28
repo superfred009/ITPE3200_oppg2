@@ -18,6 +18,15 @@ namespace UfoApp2.Model
             db.Database.EnsureDeleted();
             db.Database.EnsureCreated();
 
+            var observasjon1 = new Observasjoner { tittel = "Ufo over OsloMet", sted = "Pilestredet 35", dato = "2020-10-10", beskrivelse = "Ufoen var grønn og hadde 3 øyne" };
+            var observasjon2 = new Observasjoner { tittel = "Nordlys og Ufo", sted = "Tromsø", dato = "2020-10-20", beskrivelse = "Deilig nordlys og Ufo i Tromsø denne helgen" };
+            var observasjon3 = new Observasjoner { tittel = "Ufo landet på jordet mitt", sted = "Orderud gård", dato = "2020-11-10", beskrivelse = "Landet midt på natten, kom 2 grønne menn ut" };
+            var observasjon4 = new Observasjoner { tittel = "Ufo over Oslo", sted = "Oslo", dato = "2020-09-10", beskrivelse = "Fløy over nattehimmelen, observert fra Karl Johan" };
+
+            db.ObservasjonerUFO.Add(observasjon1);
+            db.ObservasjonerUFO.Add(observasjon2);
+            db.ObservasjonerUFO.Add(observasjon3);
+            db.ObservasjonerUFO.Add(observasjon4);
 
             // lag en påoggingsbruker
             var bruker = new Brukere();

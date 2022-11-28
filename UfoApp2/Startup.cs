@@ -9,6 +9,8 @@ using Microsoft.Extensions.Hosting;
 using UfoApp2.DAL;
 using UfoApp2.Models;
 using Microsoft.Extensions.Logging;
+using System;
+using UfoApp2.Model;
 
 namespace UfoApp2
 {
@@ -36,6 +38,15 @@ namespace UfoApp2
             services.AddDbContext<UfoContext>(options =>
                             options.UseSqlite("Data Source=Observasjon.db"));
             services.AddScoped<IUfoRepository, UfoRepository>();
+
+            services.AddSession(options =>
+            {
+                options.Cookie.Name = ".AdventureWorks.Session";
+                options.IdleTimeout = TimeSpan.FromSeconds(1800);
+                options.Cookie.IsEssential = true;
+            });
+
+            services.AddDistributedMemoryCache();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,7 +56,7 @@ namespace UfoApp2
             {
                 app.UseDeveloperExceptionPage();
                 loggerFactory.AddFile("Logs/UfoLog.txt");
-                //DBInit.Initialize(app);
+                DBInit.Initialize(app);
             }
             else
             {
@@ -59,6 +70,8 @@ namespace UfoApp2
             app.UseSpaStaticFiles();
 
             app.UseRouting();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
