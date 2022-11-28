@@ -61,3 +61,56 @@ export const loggInn = (brukernavn, passord) => {
       }
     );
 };
+
+export const endreEn = (id, tittel, sted, dato, beskrivelse) => {
+  const observasjon = JSON.stringify({
+    id: id,
+    tittel: tittel,
+    sted: sted,
+    dato: dato,
+    beskrivelse: beskrivelse,
+  });
+  fetch("ufo/lagre", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: observasjon,
+  })
+    .then((res) => res.json())
+    .then(
+      (result) => {
+        console.log("Resultatet", result);
+      },
+      (error) => {
+        console.log("Errors fra kallet", error);
+      }
+    );
+
+}
+
+export const lagreEn = async (tittel, sted, dato, beskrivelse) => {
+  const observasjon = JSON.stringify({
+    tittel: tittel,
+    sted: sted,
+    dato: dato,
+    beskrivelse: beskrivelse,
+  });
+  await fetch("ufo/lagre", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: observasjon,
+  })
+    .then((res) => res.json())
+    .then(
+      (result) => {
+        console.log("Resultatet", result);
+        window.location.href = "/";
+      },
+      (error) => {
+        console.log("Errors fra kallet", error);
+      }
+    );
+}
