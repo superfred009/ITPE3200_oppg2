@@ -1,0 +1,14 @@
+2022-11-27T14:21:35.1896402+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-27T14:21:35.2223504+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-27T14:21:35.2311690+01:00  [INF] Content root path: "C:\Users\Pdram\Source\Repos\ITPE3200_oppg2\UfoApp2" (b5d60022)
+2022-11-27T14:21:50.4122927+01:00  [ERR] Browserslist: caniuse-lite is outdated. Please run:
+ (02daff8f)
+2022-11-27T14:21:51.7249684+01:00  [ERR]   npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+(node:10540) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (eff6c54b)
+2022-11-27T14:21:51.7349372+01:00  [ERR] (Use `node --trace-deprecation ...` to show where the warning was created)
+(node:10540) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+ (1cdfb6df)
+2022-11-27T14:22:13.1692090+01:00 4000001d-0000-fe00-b63f-84710c7967bb [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression. (01be8070)
+2022-11-27T14:25:17.3001034+01:00  [INF] Application is shutting down... (90f52c38)
