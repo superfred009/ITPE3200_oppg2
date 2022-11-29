@@ -21,7 +21,7 @@ export const Innlogging = () => {
         }}
       >
         {({ values, handleChange, handleBlur, handleSubmit }) => (
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit} className="col-4">
             <FormGroup>
               <Label htmlFor="brukernavn">Brukernavn</Label>
               <Field
