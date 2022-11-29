@@ -2,20 +2,14 @@
 import { Button, Container } from "reactstrap";
 import { Link } from "react-router-dom";
 import "../custom.css";
-import { slettEn } from "./utils";
+import { slettEn, hentAdminData } from "./utils";
 
 export const LoggedInHome = () => {
   const [observasjoner, setObservasjoner] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch("ufo/hentAlle");
-      const data = await response.json();
-      setObservasjoner(data);
-      setLoading(false);
-    }
-    fetchData();
+    hentAdminData(setObservasjoner, setLoading);
   }, [observasjoner]);
 
   if (loading) {

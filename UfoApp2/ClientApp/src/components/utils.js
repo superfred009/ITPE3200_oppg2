@@ -97,3 +97,21 @@ export const lagreEn = async (tittel, sted, dato, beskrivelse) => {
       }
     );
 }
+
+export const hentAdminData = async (setObservasjoner, setLoading) => {
+  await fetch("ufo/HentAllePrivate")
+    .then((res) => res.json())
+    .then(
+      (result) => {
+        if (result.status === 401) {
+          window.location.href = "/logg-inn";
+        } else {
+          setObservasjoner(result);
+          setLoading(false);
+        }
+      },
+      (error) => {
+        console.log("Errors", error);
+      }
+    );
+}
