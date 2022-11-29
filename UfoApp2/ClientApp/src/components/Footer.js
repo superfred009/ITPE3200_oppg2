@@ -1,6 +1,6 @@
 ﻿import React from "react";
 import "./Footer.css";
-import logo-footer from "../images/alien_transparent.png"
+import logofooter from "../images/alien_transparent.png"
 
 export const Footer = () => {
   return (
@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="footer-gruppenavn">
         <p>Gruppe 7 ITPE3200 © 2022</p>
           </div>
-          <img src={logo-footer} alt="logo-footer" className="alien-logo" />
+          <img src={logofooter} alt="logo-footer" className="alien-logo" />
         <div className="footer-links">
               <a href="#">Spørsmål om UFO-er?</a>
               <a href="#">Problemer med å logge inn?</a>
