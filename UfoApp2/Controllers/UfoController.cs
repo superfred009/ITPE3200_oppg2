@@ -46,6 +46,7 @@ namespace UfoApp2.Controllers
             return BadRequest();
         }
 
+        [HttpGet]
         public async Task<ActionResult> HentAlle()
         {
             List<Observasjon> alleObservasjoner = await _db.HentAlle();
