@@ -5,6 +5,8 @@ import "../custom.css";
 import { loggInn } from "./utils";
 
 export const Innlogging = () => {
+  const errors = {};
+
   return (
     <Container>
       <h1>Innlogging</h1>
@@ -14,11 +16,11 @@ export const Innlogging = () => {
           brukernavn: "",
           passord: "",
         }}
-        onSubmit={(values) => {
+        onSubmit={(values, errors) => {
           loggInn(values.brukernavn, values.passord);
         }}
       >
-        {({ values, handleChange, handleBlur, handleSubmit }) => (
+        {({ values, handleChange, handleBlur, errors, handleSubmit }) => (
           <Form onSubmit={handleSubmit}>
             <FormGroup>
               <Label htmlFor="brukernavn">Brukernavn</Label>
