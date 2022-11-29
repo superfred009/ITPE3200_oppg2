@@ -53,6 +53,17 @@ namespace UfoApp2.Controllers
             return Ok(alleObservasjoner);
         }
 
+        [HttpGet]
+        public async Task<ActionResult> HentAllePrivate()
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
+            {
+                return Unauthorized();
+            }
+            List<Observasjon> alleObservasjoner = await _db.HentAlle();
+            return Ok(alleObservasjoner);
+        }
+
         public async Task<ActionResult> Slett(int id)
         {
             if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
