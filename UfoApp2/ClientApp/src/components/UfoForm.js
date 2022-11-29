@@ -7,6 +7,10 @@ import { lagreEn } from "./utils";
 export const UfoForm = () => {
   return (
     <Container>
+      <Container className="home-wrapper">
+        <h1>Registrer en observasjon</h1>
+        <p>Har du observert en UFO? Da vil vi gjerne høre fra deg! Registrer observasjonen her.</p>
+      </Container>
       <Formik
         initialValues={{
           tittel: "",
