@@ -16,6 +16,10 @@ code {
     background-color: black;
     border-color: black;
 }
+.btn-danger:hover {
+    background-color: black;
+    border-color: black;
+}
 .card-text {
     color: black;
     text-decoration: none;
