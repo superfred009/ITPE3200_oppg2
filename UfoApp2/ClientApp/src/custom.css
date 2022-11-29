@@ -8,14 +8,26 @@ code {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  color: white;
+  background-color: forestgreen;
+  border-color: forestgreen;
+}
+.btn-primary:hover {
+    background-color: black;
+    border-color: black;
+}
+.card-text {
+    color: black;
+    text-decoration: none;
+}
+.card-text:hover {
+    color: black;
+    text-decoration: none;
 }
 
 .card {
-  border: 0px;
-  margin-bottom: 25px;
+    border: 0px;
+    margin-bottom: 25px;
 }
 .card-body {
   border: solid 1px;
@@ -28,10 +40,7 @@ code {
   border-color: black;
   box-shadow: 5px 5px 5px grey;
 }
-.card a {
-  color: black;
-  text-decoration: none;
-}
+
 .card a:hover h5 {
   text-decoration: underline;
 }
