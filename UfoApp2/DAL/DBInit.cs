@@ -22,11 +22,15 @@ namespace UfoApp2.Model
             var observasjon2 = new Observasjoner { tittel = "Nordlys og Ufo", sted = "Tromsø", dato = "2020-10-20", beskrivelse = "Deilig nordlys og Ufo i Tromsø denne helgen" };
             var observasjon3 = new Observasjoner { tittel = "Ufo landet på jordet mitt", sted = "Orderud gård", dato = "2020-11-10", beskrivelse = "Landet midt på natten, kom 2 grønne menn ut" };
             var observasjon4 = new Observasjoner { tittel = "Ufo over Oslo", sted = "Oslo", dato = "2020-09-10", beskrivelse = "Fløy over nattehimmelen, observert fra Karl Johan" };
+            var observasjon5 = new Observasjoner { tittel = "Nok en Ufo ved Stonehenge", sted = "Stonehenge", dato = "2022-11-12", beskrivelse = "Gikk en tur bort til stonehenge, og der var det en Ufo som hadde landet" };
+            var observasjon6 = new Observasjoner { tittel = "Ufo i Bergen", sted = "Bergen", dato = "2022-08-06", beskrivelse = "Hadde tatt Fløybanen opp på kvelden, og da kom det en UFO forbi" };
 
             db.ObservasjonerUFO.Add(observasjon1);
             db.ObservasjonerUFO.Add(observasjon2);
             db.ObservasjonerUFO.Add(observasjon3);
             db.ObservasjonerUFO.Add(observasjon4);
+            db.ObservasjonerUFO.Add(observasjon5);
+            db.ObservasjonerUFO.Add(observasjon6);
 
             // lag en påoggingsbruker
             var bruker = new Brukere();

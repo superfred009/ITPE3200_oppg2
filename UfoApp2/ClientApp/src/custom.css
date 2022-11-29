@@ -4,7 +4,7 @@ a {
 }
 
 code {
-  color: #E01A76;
+  color: #e01a76;
 }
 
 .btn-primary {
@@ -33,7 +33,7 @@ code {
   text-decoration: none;
 }
 .card a:hover h5 {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .error-msg {
@@ -45,11 +45,11 @@ code {
   min-height: 60vh;
 }
 
-input:invalid[focused="true"]{
+input:invalid[focused="true"] {
   border: 1px solid red;
 }
 
-input:invalid[focused="true"] ~ span{
+input:invalid[focused="true"] ~ span {
   display: block;
 }
 
@@ -60,11 +60,13 @@ input:invalid[focused="true"] ~ span{
 .admin-wrapper {
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-bottom: solid 1px; 
+  border-bottom: solid 1px;
 }
 
 .home-wrapper {
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-bottom: solid 1px; 
+  border-bottom: solid 1px;
+  padding-left: 0px;
+  padding-right: 0px;
 }

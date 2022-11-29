@@ -7,8 +7,10 @@ import { loggInn } from "./utils";
 export const Innlogging = () => {
   return (
     <Container>
-      <h1>Innlogging</h1>
-      <p>For å endre eller slette observasjoner må du logge inn</p>
+      <Container className="home-wrapper">
+        <h1>Innlogging</h1>
+        <p>For å endre eller slette observasjoner må du logge inn</p>
+      </Container>
       <Formik
         initialValues={{
           brukernavn: "",
