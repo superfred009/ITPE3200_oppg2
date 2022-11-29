@@ -10,6 +10,7 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./NavMenu.css";
+import logo from "../images/alien_transparent.png"
 
 export const NavMenu = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -26,7 +27,7 @@ export const NavMenu = () => {
       >
         <Container>
           <NavbarBrand tag={Link} to="/">
-            Ufo Observasjoner
+           <img src={logo} alt="logo-header" className="alien-logo-header" />
           </NavbarBrand>
           <NavbarToggler onClick={toggleNavbar} className="mr-2" />
           <Collapse
@@ -36,17 +37,17 @@ export const NavMenu = () => {
           >
             <ul className="navbar-nav flex-grow">
               <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/">
+                <NavLink tag={Link} className="text-home" to="/">
                   Home
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/ufo-form">
+                <NavLink tag={Link} className="text-reg" to="/ufo-form">
                   Registrer observasjon
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/logg-inn">
+                <NavLink tag={Link} className="text-logg" to="/logg-inn">
                   Logg inn
                 </NavLink>
               </NavItem>

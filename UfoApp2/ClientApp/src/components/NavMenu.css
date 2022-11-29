@@ -13,7 +13,20 @@ html {
   }
 }
 
+header {
+    background-color: dimgray;
+}
+
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
+
+.alien-logo-header {
+    width: auto;
+    height: 50px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: lightgreen;
+}
+
 
