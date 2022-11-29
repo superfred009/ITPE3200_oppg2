@@ -27,7 +27,7 @@ export const FetchUfoData = () => {
       <div className="row">
         {observasjoner.map((observasjon) => (
           <div key={observasjon.id} className="card col-6">
-            <Link
+            <Link className="card-text"
               to={{
                 pathname: `/explore-ufo/${observasjon.id}`,
                 state: { observasjoner: observasjon },
