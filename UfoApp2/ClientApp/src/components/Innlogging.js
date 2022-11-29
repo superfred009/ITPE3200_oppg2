@@ -5,7 +5,6 @@ import "../custom.css";
 import { loggInn } from "./utils";
 
 export const Innlogging = () => {
-
   return (
     <Container>
       <h1>Innlogging</h1>
