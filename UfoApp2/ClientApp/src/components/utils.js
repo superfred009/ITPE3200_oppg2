@@ -1,6 +1,4 @@
-﻿import React, { Component } from "react";
-
-export const slettEn = async (id) => {
+﻿export const slettEn = async (id) => {
   await fetch("ufo/slett?id=" + id)
     .then((res) => res.json())
     .then(
