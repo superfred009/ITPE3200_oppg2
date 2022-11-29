@@ -10,6 +10,7 @@ footer {
 
 .footer-body {
     background: dimgrey;
+    min-height: 20vh;
     width: 100%;
     text-align: center;
     display: flex;
@@ -39,4 +40,14 @@ footer {
 
 .footer-links a {
     color: lightgreen;
+}
+@media only screen and (max-width: 690px) {
+    .footer-body {
+        flex-direction: column;
+        align-items: center;
+        display: block;
+    }
+    .footer-gruppenavn p {
+        margin-top: 0;
+    }
 }
