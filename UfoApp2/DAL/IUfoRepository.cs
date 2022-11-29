@@ -15,6 +15,5 @@ namespace UfoApp2.Models
         Task<Observasjon> HentEn(int id);
         Task<bool> Endre(Observasjon endreObservasjon);
         Task<bool> LoggInn(Bruker Bruker);
-        //Task<bool> LoggOut
     }
 }

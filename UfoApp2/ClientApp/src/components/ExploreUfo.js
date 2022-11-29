@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Container } from "reactstrap";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "../custom.css";
 
 export const ExploreUfo = () => {
